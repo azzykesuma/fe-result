@@ -1,0 +1,207 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;1,800&display=swap');
+
+/* VARIABLES */
+:root {
+    /* BCG COLOR */
+    --color-light-red: hsl(0, 100%, 67%, 0.1);
+    --color-orangey-yellow: hsl(39, 100%, 56%, 0.1);
+    --color-green-teal: hsl(166, 100%, 37%, 0.1);
+    --color-cobalt-blue: hsl(234, 85%, 45%, 0.1);
+
+    /* Text Colors */
+    --color-light-red-text: hsl(0, 100%, 67%);
+    --color-orangey-yellow-text: hsl(39, 100%, 56%);
+    --color-green-teal-text: hsl(166, 100%, 37%);
+    --color-cobalt-blue-text: hsl(234, 85%, 45%);
+
+    /* Gradient Colors */
+    --color-light-slate-blue: hsl(252, 100%, 67%);
+    --color-light-royal-blue: hsl(241, 81%, 54%);
+    
+    --color-violet-blue: hsla(256, 72%, 46%, 1);
+    --color-persian-blue: hsla(241, 72%, 46%, 0);
+    
+    /* Neutral Colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-pale-blue: hsl(221, 100%, 96%);
+    --color-light-lavender: hsl(241, 100%, 89%);
+    --color-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,body {
+    height: 100vh;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: var(--color-pale-blue);
+}
+
+h3 {
+    font-size: 16px;
+}
+
+
+.main_card_container {
+    display: flex;
+    flex-direction: column;
+}
+.score__card {
+    background: linear-gradient(to bottom, var(--color-light-slate-blue), var(--color-light-royal-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color:var(--color-white);
+    border-radius: 0 0 20px 20px;
+}
+
+.score__card h1 {
+    font-size: 20px;
+    color:hsl(0, 0%, 80%)
+}
+
+.score {
+    margin-top: 10px;
+    background: linear-gradient(to bottom, var(--color-violet-blue), var(--color-persian-blue));
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score h2 {
+    font-size: 2em;
+}
+
+.score p {
+    color: hsl(0, 0%, 60%);
+    font-size: 12px;
+}
+
+.score__info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.score__info p {
+    margin-block: 10px;
+    color: hsl(0, 0%, 80%);
+    font-size: 16px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.summary h3 {
+    margin-bottom: 20px;
+}
+.summary_points {
+    display: grid;
+    grid-template-columns: 10% 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-block: 10px;
+}
+.summary_points p {
+    font-size: 14px;
+}
+
+.summary_points_0 {
+    background-color: var(--color-light-red);
+}
+.summary_points_0 p {
+    color: var(--color-light-red-text);
+}
+.summary_points_1 p {
+    color: var(--color-orangey-yellow-text)
+}
+.summary_points_1 {
+    background-color: var(--color-orangey-yellow);
+} 
+.summary_points_2 p {
+    color: var(--color-green-teal-text)
+}
+.summary_points_2 {
+    background-color: var(--color-green-teal);
+}
+.summary_points_3 {
+    background-color: var(--color-cobalt-blue);
+}
+.summary_points_3 p {
+    color: var(--color-cobalt-blue-text);
+}
+
+.score_pts {
+    color: var(--color-dark-gray-blue) !important;
+}
+
+.score_pts span {
+    opacity: 0.7;
+}
+
+.summary button {
+    background-color: var(--color-dark-gray-blue);
+    border: 0;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.summary button:hover {
+    background: var(--color-light-slate-blue);
+}
+
+/* desktop */
+@media screen and (min-width: 990px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main_card_container {
+        flex-direction: row;
+        max-width: 550px;
+        gap: 10px;
+        box-shadow: 5px 7px 5px -8px rgba(0,0,0,0.5);
+        background-color: var(--color-white);
+        border-radius: 30px;
+    }
+    .score__card {
+        width: 50%;
+        border-radius: 30px;
+    }
+    .score h2 {
+        font-size: 4em;
+    }
+    .summary {
+        width: 50%;
+    }
+    .score {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+}
